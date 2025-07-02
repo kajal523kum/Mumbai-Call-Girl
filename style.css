@@ -1,0 +1,336 @@
+/* ✅ Global Reset and Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ✅ Header and Navigation */
+header {
+  background: #111;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ✅ Hero Section */
+.hero {
+  background: url('IMAGES/h.jpg') center center / cover no-repeat;
+  padding: 30px 20px;
+  text-align: center;
+  color: rgb(25, 2, 2);
+  /* Optional: if text over image */
+  position: relative;
+}
+
+
+.dropdown-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#cityFilter {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* ✅ Call Button */
+.call-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.call-button a {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.call-button a:hover {
+  background-color: #218838;
+}
+
+/* ✅ Description Section */
+.description {
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+/* ✅ Card Grid Layout */
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  flex: 1 1 300px;
+  box-sizing: border-box;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-content p {
+  margin: 5px 0;
+}
+
+.verified {
+  color: green;
+  font-weight: bold;
+}
+
+.card-buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card-buttons a {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 12px;
+  background: #25d366;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.card-buttons a.call {
+  background: #007bff;
+}
+
+/* ✅ Footer */
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ✅ Responsive Table Styling (Desktop First) */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #4f0101;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.responsive-table thead {
+  background: #7b0000;
+  color: #fff;
+}
+
+.responsive-table th,
+.responsive-table td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+/* ✅ Booking Button */
+.book-btn {
+  background: #7fcb05;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #333;
+}
+
+/* ✅ Floating Buttons */
+.float-btn {
+  position: fixed;
+  bottom: 20px;
+  min-width: 120px;
+  height: 50px;
+  background-color: #25D366;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 10px;
+  text-decoration: none;
+  pointer-events: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.left-btn {
+  left: 20px;
+  background-color: #013a72;
+}
+
+.right-btn {
+  right: 20px;
+  background-color: #25D366;
+}
+
+.float-btn:hover {
+  opacity: 0.9;
+}
+
+/* ✅ Mobile Floating Button Wrapper */
+.mobile-buttons {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-buttons {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    pointer-events: none;
+  }
+}
+
+/* ✅ Responsive for Tablets */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 45%;
+  }
+
+  .responsive-table {
+    border: 0;
+    background-color: red;
+    color: black;
+  }
+
+  .responsive-table thead {
+    display: none;
+  }
+
+  .responsive-table tr {
+    margin-bottom: 15px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: red;
+    padding: 10px;
+  }
+
+  .responsive-table td {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    border: none;
+    padding: 10px 0;
+    color: black;
+  }
+
+  .responsive-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: white;
+    width: 50%;
+    display: inline-block;
+  }
+}
+
+/* ✅ Responsive for Mobile */
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  #cityFilter {
+    width: 90%;
+  }
+
+  .call-button a {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content p {
+    font-size: 14px;
+  }
+
+  .container-2 {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .container-2 h2 {
+    color: blue;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .container-2 p {
+    margin-bottom: 15px;
+  }
+
+  .highlight {
+    color: #cc3366;
+    font-weight: bold;
+  }
+}
